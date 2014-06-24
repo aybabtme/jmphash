@@ -83,12 +83,16 @@ func testHasher_Hash_Move(t *testing.T, maxN uint32) {
 
 }
 
-func BenchmarkHasherHashN1(b *testing.B)     { benchmarkHasherHash(b, 1) }
-func BenchmarkHasherHashN5(b *testing.B)     { benchmarkHasherHash(b, 5) }
-func BenchmarkHasherHashN10(b *testing.B)    { benchmarkHasherHash(b, 10) }
-func BenchmarkHasherHashN100(b *testing.B)   { benchmarkHasherHash(b, 100) }
-func BenchmarkHasherHashN1000(b *testing.B)  { benchmarkHasherHash(b, 1000) }
-func BenchmarkHasherHashN10000(b *testing.B) { benchmarkHasherHash(b, 10000) }
+func BenchmarkHasherHashN1(b *testing.B)           { benchmarkHasherHash(b, 1) }
+func BenchmarkHasherHashN5(b *testing.B)           { benchmarkHasherHash(b, 5) }
+func BenchmarkHasherHashN10(b *testing.B)          { benchmarkHasherHash(b, 10) }
+func BenchmarkHasherHashN100(b *testing.B)         { benchmarkHasherHash(b, 100) }
+func BenchmarkHasherHashN1000(b *testing.B)        { benchmarkHasherHash(b, 1000) }
+func BenchmarkHasherHashN10_000(b *testing.B)      { benchmarkHasherHash(b, 10000) }
+func BenchmarkHasherHashN100_000(b *testing.B)     { benchmarkHasherHash(b, 100000) }
+func BenchmarkHasherHashN1_000_000(b *testing.B)   { benchmarkHasherHash(b, 1000000) }
+func BenchmarkHasherHashN10_000_000(b *testing.B)  { benchmarkHasherHash(b, 10000000) }
+func BenchmarkHasherHashN100_000_000(b *testing.B) { benchmarkHasherHash(b, 100000000) }
 
 func benchmarkHasherHash(b *testing.B, n int) {
 	h := New(n)
